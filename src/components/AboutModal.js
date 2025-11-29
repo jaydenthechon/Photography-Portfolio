@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './AboutModal.css';
-import profilePhoto from '../assets/images/portfolio-072.jpg';
+import profilePhoto from '../assets/images/portfolio-088.jpg';
 
 const AboutModal = ({ isOpen, onClose }) => {
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ const AboutModal = ({ isOpen, onClose }) => {
         <h2>About Me</h2>
         
         <p className="modal-intro">
-          I'm a passionate photographer with 9 years of experience capturing the world through my lens.
+          I'm Jayden, a Boston based photographer with 9 years of experience capturing the world through my lens.
         </p>
         
         <p>
@@ -33,21 +33,6 @@ const AboutModal = ({ isOpen, onClose }) => {
           in the most mundane of moments - those fleeting instances that pass by us in life. With every 
           click of the shutter, I strive to tell a story and preserve memories that last a lifetime.
         </p>
-        
-        <div className="modal-stats">
-          <div className="modal-stat">
-            <strong>1000+</strong>
-            <span>Photos Taken</span>
-          </div>
-          <div className="modal-stat">
-            <strong>50+</strong>
-            <span>Happy Clients</span>
-          </div>
-          <div className="modal-stat">
-            <strong>10+</strong>
-            <span>Awards Won</span>
-          </div>
-        </div>
         
         <button className="modal-learn-more" onClick={handleLearnMore}>
           Learn More About Me →

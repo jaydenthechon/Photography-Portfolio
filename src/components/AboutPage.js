@@ -73,37 +73,14 @@ const AboutPage = () => {
           <div className="gear-category">
             <h3>Lenses</h3>
             <ul>
-              <li>[Add your primary lens]</li>
-              <li>[Add your portrait lens]</li>
-              <li>[Add your wide angle lens]</li>
-              <li>[Add your telephoto lens]</li>
-              <li>[Add any other lenses]</li>
-            </ul>
-          </div>
-
-          <div className="gear-category">
-            <h3>Accessories</h3>
-            <ul>
-              <li>[Add tripod, filters, lighting equipment, etc.]</li>
+              <li>Sigma Art 17-40mm f/1.8</li>
+              <li>Sigma 56mm f/1.4</li>
+              <li>Fujifilm XF 60mm f/2.4</li>
             </ul>
           </div>
         </section>
 
         {/* Stats Section */}
-        <section className="about-stats-section">
-          <div className="about-stat-card">
-            <h3>1000+</h3>
-            <p>Photos Taken</p>
-          </div>
-          <div className="about-stat-card">
-            <h3>50+</h3>
-            <p>Happy Clients</p>
-          </div>
-          <div className="about-stat-card">
-            <h3>10+</h3>
-            <p>Awards Won</p>
-          </div>
-        </section>
       </div>
     </div>
   );

@@ -33,7 +33,7 @@
   align-items: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 3px solid #667eea;
+  border-bottom: 3px solid #040c2e;
 }
 
 .category-title {
@@ -51,7 +51,7 @@
 
 .view-all-btn {
   padding: 0.8rem 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #fb0000 0%, #a24b4b 100%);
   color: #fff;
   border: none;
   border-radius: 25px;
