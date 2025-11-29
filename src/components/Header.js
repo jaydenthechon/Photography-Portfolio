@@ -29,6 +29,10 @@ const Header = () => {
     }
   };
 
+  const handleAboutClick = () => {
+    navigate('/about');
+  };
+
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-content">
@@ -38,7 +42,7 @@ const Header = () => {
         <nav className="nav">
           <button onClick={() => scrollToSection('home')}>Home</button>
           <button onClick={() => scrollToSection('gallery')}>Gallery</button>
-          <button onClick={() => scrollToSection('about')}>About</button>
+          <button onClick={handleAboutClick}>About</button>
           <button onClick={() => scrollToSection('contact')}>Contact</button>
         </nav>
       </div>

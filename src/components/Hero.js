@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import AboutModal from './AboutModal';
 import './Hero.css';
 
 // Import all photos
@@ -165,6 +166,7 @@ import portraiture24 from '../assets/images/portfolio-163.jpg';
 
 const Hero = () => {
   const [randomImages, setRandomImages] = useState([]);
+  const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
 
   useEffect(() => {
     // All available images
@@ -203,12 +205,18 @@ const Hero = () => {
       <div className="hero-content">
         <h1 className="hero-title">Memento</h1>
         <p className="hero-subtitle">Through the Looking Glass</p>
-        <button className="hero-button" onClick={() => {
-          document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
-        }}>
-          View Portfolio
-        </button>
+        <div className="hero-buttons">
+          <button className="hero-button primary" onClick={() => {
+            document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
+          }}>
+            View Portfolio
+          </button>
+          <button className="hero-button secondary" onClick={() => setIsAboutModalOpen(true)}>
+            About Me
+          </button>
+        </div>
       </div>
+      <AboutModal isOpen={isAboutModalOpen} onClose={() => setIsAboutModalOpen(false)} />
     </section>
   );
 };

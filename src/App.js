@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import GalleryHome from './components/GalleryHome';
 import CategoryGallery from './components/CategoryGallery';
-import About from './components/About';
+import AboutPage from './components/AboutPage';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -87,11 +87,11 @@ function App() {
             <>
               <Hero />
               <GalleryHome />
-              <About />
               <Contact />
             </>
           } />
           <Route path="/gallery/:category" element={<CategoryGallery />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
         <Footer />
       </div>

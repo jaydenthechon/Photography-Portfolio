@@ -1,0 +1,231 @@
+.about-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+}
+
+/* Hero Section with Background Photo */
+.about-hero {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Profile Photo */
+.profile-photo-container {
+  margin: 0 auto 2rem;
+  animation: fadeIn 1s ease;
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+.about-hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.8s ease 0.3s both;
+}
+
+.about-hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.8s ease 0.5s both;
+}
+
+.about-page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.about-section {
+  background: white;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 0.6s ease;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  color: #667eea;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.about-section h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.gear-section .gear-category {
+  margin-bottom: 2rem;
+}
+
+.gear-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.gear-section li {
+  font-size: 1.1rem;
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 0.5rem;
+  background: #f8f9fa;
+  border-left: 4px solid #667eea;
+  border-radius: 4px;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.gear-section li:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.about-stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.about-stat-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.about-stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.about-stat-card h3 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  color: white;
+  font-weight: 700;
+}
+
+.about-stat-card p {
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.95;
+  color: white;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    height: 60vh;
+    min-height: 400px;
+    background-attachment: scroll;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .about-hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .about-page-container {
+    padding: 2rem 1rem;
+  }
+
+  .about-section {
+    padding: 1.5rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-section p,
+  .gear-section li {
+    font-size: 1rem;
+  }
+
+  .about-stats-section {
+    grid-template-columns: 1fr;
+  }
+}
