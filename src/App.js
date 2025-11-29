@@ -78,7 +78,7 @@ function ScrollRestoration() {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Photography-Portfolio">
       <ScrollRestoration />
       <div className="App">
         <Header />
