@@ -77,7 +77,7 @@
 .gallery-item {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 0;
   cursor: pointer;
   aspect-ratio: 1;
   animation: fadeIn 0.6s ease forwards;

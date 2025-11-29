@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Gallery.css';
 
 // Import your images here
@@ -201,6 +201,37 @@ const Gallery = () => {
     ? images 
     : images.filter(img => img.category === filter);
 
+  // Navigation functions
+  const goToNext = () => {
+    const currentIndex = filteredImages.findIndex(img => img.id === selectedImage.id);
+    const nextIndex = (currentIndex + 1) % filteredImages.length; // Wrap around to start
+    setSelectedImage(filteredImages[nextIndex]);
+  };
+
+  const goToPrev = () => {
+    const currentIndex = filteredImages.findIndex(img => img.id === selectedImage.id);
+    const prevIndex = (currentIndex - 1 + filteredImages.length) % filteredImages.length; // Wrap around to end
+    setSelectedImage(filteredImages[prevIndex]);
+  };
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (!selectedImage) return;
+      
+      if (e.key === 'ArrowRight') {
+        goToNext();
+      } else if (e.key === 'ArrowLeft') {
+        goToPrev();
+      } else if (e.key === 'Escape') {
+        setSelectedImage(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [selectedImage, filteredImages]);
+
   return (
     <section id="gallery" className="gallery">
       <div className="gallery-container">
@@ -241,6 +272,12 @@ const Gallery = () => {
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
             <button className="lightbox-close" onClick={() => setSelectedImage(null)}>
               ×
+            </button>
+            <button className="lightbox-nav prev" onClick={goToPrev}>
+              ‹
+            </button>
+            <button className="lightbox-nav next" onClick={goToNext}>
+              ›
             </button>
             <img src={selectedImage.src} alt={selectedImage.title} />
             <h3>{selectedImage.title}</h3>

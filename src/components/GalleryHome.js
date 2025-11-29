@@ -119,6 +119,40 @@ const GalleryHome = () => {
             </div>
           </div>
         ))}
+
+        {/* All Photos Section */}
+        <div className="category-section">
+          <div className="category-header">
+            <div>
+              <h3 className="category-title">All Photos</h3>
+              <p className="category-description">Browse all photography from every collection</p>
+            </div>
+            <button 
+              className="view-all-btn"
+              onClick={() => navigate('/gallery/all')}
+            >
+              View All →
+            </button>
+          </div>
+
+          <div className="sample-grid">
+            {categories.slice(0, 3).map((category) => 
+              category.samples.slice(0, 1).map((image, index) => (
+                <div
+                  key={image.id}
+                  className="gallery-item"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                  onClick={() => navigate('/gallery/all')}
+                >
+                  <img src={image.src} alt={image.title} />
+                  <div className="gallery-item-overlay">
+                    <h4>{image.title}</h4>
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
+        </div>
       </div>
     </section>
   );
