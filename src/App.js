@@ -19,6 +19,11 @@ function ScrollRestoration() {
       window.history.scrollRestoration = 'manual';
     }
 
+    // Check if this is a page reload or back/forward navigation
+    const navigationEntry = performance.getEntriesByType('navigation')[0];
+    const isReload = navigationEntry && navigationEntry.type === 'reload';
+    const isBackForward = navigationEntry && navigationEntry.type === 'back_forward';
+
     // Save scroll position to session storage periodically
     const saveScrollPosition = () => {
       const scrollData = {
@@ -40,20 +45,25 @@ function ScrollRestoration() {
     // Save before unload
     window.addEventListener('beforeunload', saveScrollPosition);
 
-    // Restore scroll position on mount
-    const savedData = sessionStorage.getItem(`scroll_${location.pathname}`);
-    if (savedData) {
-      try {
-        const { position } = JSON.parse(savedData);
-        // Use requestAnimationFrame to ensure DOM is ready
-        requestAnimationFrame(() => {
-          setTimeout(() => {
-            window.scrollTo(0, position);
-          }, 0);
-        });
-      } catch (e) {
-        console.error('Error restoring scroll position:', e);
+    // Restore scroll position only on reload or back/forward
+    if (isReload || isBackForward) {
+      const savedData = sessionStorage.getItem(`scroll_${location.pathname}`);
+      if (savedData) {
+        try {
+          const { position } = JSON.parse(savedData);
+          // Use requestAnimationFrame to ensure DOM is ready
+          requestAnimationFrame(() => {
+            setTimeout(() => {
+              window.scrollTo(0, position);
+            }, 0);
+          });
+        } catch (e) {
+          console.error('Error restoring scroll position:', e);
+        }
       }
+    } else {
+      // New navigation - scroll to top
+      window.scrollTo(0, 0);
     }
 
     return () => {
