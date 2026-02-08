@@ -87,6 +87,7 @@ function App() {
           <Route path="/collections" element={<Collections />} />
           <Route path="/gallery/:category" element={<CategoryGallery />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>

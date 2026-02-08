@@ -60,7 +60,7 @@ const Header = () => {
           <button onClick={() => navigate('/')}>Home</button>
           <button onClick={() => navigate('/collections')}>Gallery</button>
           <button onClick={handleAboutClick}>About</button>
-          <button onClick={() => scrollToSection('contact')}>Contact</button>
+          <button onClick={() => navigate('/contact')}>Contact</button>
         </nav>
       </div>
     </header>

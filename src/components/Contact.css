@@ -1,11 +1,12 @@
 .contact {
-  padding: 100px 2rem;
-  background: linear-gradient(135deg, #000000 0%, #000000 100%);
+  min-height: 100vh;
+  padding: 120px 2rem 60px;
+  background: #000000;
   color: #fff;
 }
 
 .contact-container {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -14,159 +15,91 @@
   text-align: center;
   margin-bottom: 1rem;
   font-weight: 700;
+  color: #ffffff;
 }
 
 .contact-description {
   text-align: center;
   font-size: 1.2rem;
   margin-bottom: 4rem;
-  opacity: 0.95;
+  color: #aaaaaa;
 }
 
-.contact-content {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 4rem;
-  align-items: start;
-}
-
-.contact-info {
+.instagram-links {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.contact-item {
+.instagram-card {
   display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1.5rem;
+  align-items: center;
+  gap: 2rem;
+  background: #1a1a1a;
+  padding: 2.5rem;
   border-radius: 15px;
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, background 0.3s ease;
+  border: 2px solid #333;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
-.contact-item:hover {
-  transform: translateX(10px);
-  background: rgba(255, 255, 255, 0.15);
+.instagram-card:hover {
+  transform: translateY(-5px);
+  border-color: #667eea;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
 }
 
-.contact-icon {
-  width: 50px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
+.instagram-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #fb0000 0%, #a24b4b 100%);
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.contact-icon svg {
-  width: 28px;
-  height: 28px;
+.instagram-icon svg {
+  width: 35px;
+  height: 35px;
+  color: #fff;
 }
 
-.contact-item h3 {
-  font-size: 1.2rem;
+.instagram-info {
+  flex: 1;
+}
+
+.instagram-info h3 {
+  font-size: 1.5rem;
   margin: 0 0 0.5rem 0;
-  font-weight: 600;
+  font-weight: 700;
+  color: #ffffff;
 }
 
-.contact-item p {
+.instagram-handle {
   margin: 0;
-  opacity: 0.9;
-  font-size: 1rem;
-}
-
-.contact-item p a {
-  color: #fff;
-  text-decoration: none;
-  transition: opacity 0.3s ease;
-}
-
-.contact-item p a:hover {
-  opacity: 0.7;
-  text-decoration: underline;
-}
-
-.contact-form {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 3rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 1rem 1.2rem;
-  border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-family: inherit;
-  transition: border-color 0.3s ease;
-  color: #333;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #667eea;
-}
-
-.contact-form textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.submit-btn {
-  width: 100%;
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, #ea6666 0%, #a24b4b 100%);
-  color: #fff;
-  border: none;
-  border-radius: 10px;
   font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
-
-.submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
-}
-
-.submit-btn:active {
-  transform: translateY(0);
+  color: #667eea;
+  font-weight: 500;
 }
 
 @media (max-width: 968px) {
-  .contact-content {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
   .contact-title {
     font-size: 2.2rem;
   }
-
-  .contact-form {
-    padding: 2rem;
+  
+  .instagram-links {
+    max-width: 100%;
   }
 }
 
 @media (max-width: 568px) {
   .contact {
-    padding: 60px 1rem;
+    padding: 80px 1rem 40px;
   }
 
   .contact-title {
@@ -177,11 +110,26 @@
     font-size: 1rem;
   }
 
-  .contact-form {
+  .instagram-card {
     padding: 1.5rem;
+    gap: 1.5rem;
   }
 
-  .contact-item {
-    padding: 1.2rem;
+  .instagram-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .instagram-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .instagram-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .instagram-handle {
+    font-size: 1rem;
   }
 }
