@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import AboutModal from './AboutModal';
 import './Hero.css';
 
@@ -167,6 +168,7 @@ import portraiture24 from '../assets/images/portfolio-163.jpg';
 const Hero = () => {
   const [randomImages, setRandomImages] = useState([]);
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // All available images
@@ -206,9 +208,7 @@ const Hero = () => {
         <h1 className="hero-title">Memento</h1>
         <p className="hero-subtitle">Through the Looking Glass</p>
         <div className="hero-buttons">
-          <button className="hero-button primary" onClick={() => {
-            document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
-          }}>
+          <button className="hero-button primary" onClick={() => navigate('/collections')}>
             View Portfolio
           </button>
           <button className="hero-button secondary" onClick={() => setIsAboutModalOpen(true)}>

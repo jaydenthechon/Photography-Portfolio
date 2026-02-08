@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import GalleryHome from './components/GalleryHome';
+import Collections from './components/Collections';
 import CategoryGallery from './components/CategoryGallery';
 import AboutPage from './components/AboutPage';
 import Contact from './components/Contact';
@@ -83,13 +83,8 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <GalleryHome />
-              <Contact />
-            </>
-          } />
+          <Route path="/" element={<Hero />} />
+          <Route path="/collections" element={<Collections />} />
           <Route path="/gallery/:category" element={<CategoryGallery />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>

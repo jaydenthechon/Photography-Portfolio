@@ -1,6 +1,6 @@
 .gallery-home {
   padding: 100px 2rem;
-  background: #f8f9fa;
+  background: #000000;
 }
 
 .gallery-container {
@@ -12,14 +12,14 @@
   font-size: 3rem;
   text-align: center;
   margin-bottom: 1rem;
-  color: #333;
+  color: #ffffff;
   font-weight: 700;
 }
 
 .gallery-description {
   text-align: center;
   font-size: 1.2rem;
-  color: #666;
+  color: #aaaaaa;
   margin-bottom: 4rem;
 }
 
@@ -33,19 +33,19 @@
   align-items: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 3px solid #040c2e;
+  border-bottom: 3px solid #ffffff;
 }
 
 .category-title {
   font-size: 2rem;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
 
 .category-description {
   font-size: 1rem;
-  color: #888;
+  color: #aaaaaa;
   margin: 0;
 }
 
@@ -69,9 +69,8 @@
 }
 
 .sample-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  column-count: 3;
+  column-gap: 2rem;
 }
 
 .gallery-item {
@@ -83,6 +82,11 @@
   opacity: 0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #000;
+  margin-bottom: 2rem;
+  break-inside: avoid;
+  display: inline-block;
+  width: 100%;
 }
 
 .gallery-item:hover {

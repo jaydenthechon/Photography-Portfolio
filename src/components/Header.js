@@ -57,8 +57,8 @@ const Header = () => {
           JaydentheChon
         </h1>
         <nav className="nav">
-          <button onClick={() => scrollToSection('home')}>Home</button>
-          <button onClick={() => scrollToSection('gallery')}>Gallery</button>
+          <button onClick={() => navigate('/')}>Home</button>
+          <button onClick={() => navigate('/collections')}>Gallery</button>
           <button onClick={handleAboutClick}>About</button>
           <button onClick={() => scrollToSection('contact')}>Contact</button>
         </nav>
