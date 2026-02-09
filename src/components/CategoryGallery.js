@@ -7,6 +7,8 @@ const CategoryGallery = () => {
   const { category } = useParams();
   const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState(null);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
 
   const categoryTitles = Object.keys(categoryInfo).reduce((acc, key) => {
     acc[key] = categoryInfo[key].title;
@@ -31,6 +33,33 @@ const CategoryGallery = () => {
     const prevIndex = (currentIndex - 1 + images.length) % images.length; // Wrap around to end
     setSelectedImage(images[prevIndex]);
   }, [images, selectedImage]);
+
+  // Minimum swipe distance (in px)
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe) {
+      goToNext();
+    }
+    if (isRightSwipe) {
+      goToPrev();
+    }
+  };
 
   // Keyboard navigation
   useEffect(() => {
@@ -78,15 +107,15 @@ const CategoryGallery = () => {
 
       {selectedImage && (
         <div className="lightbox" onClick={() => setSelectedImage(null)}>
-          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+          <div 
+            className="lightbox-content" 
+            onClick={(e) => e.stopPropagation()}
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+          >
             <button className="lightbox-close" onClick={() => setSelectedImage(null)}>
               ×
-            </button>
-            <button className="lightbox-nav prev" onClick={goToPrev}>
-              ‹
-            </button>
-            <button className="lightbox-nav next" onClick={goToNext}>
-              ›
             </button>
             <img src={selectedImage.src} alt="" />
           </div>
