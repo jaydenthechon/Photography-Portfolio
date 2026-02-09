@@ -70,7 +70,7 @@ const CategoryGallery = () => {
               style={{ animationDelay: `${index * 0.05}s` }}
               onClick={() => setSelectedImage(image)}
             >
-              <img src={image.src} alt={image.title} />
+              <img src={image.src} alt="" />
               <div className="gallery-item-overlay">
                 <h3>{image.title}</h3>
               </div>
