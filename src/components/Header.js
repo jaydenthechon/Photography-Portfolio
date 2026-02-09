@@ -59,6 +59,7 @@ const Header = () => {
         <nav className="nav">
           <button onClick={() => navigate('/')}>Home</button>
           <button onClick={() => navigate('/collections')}>Gallery</button>
+          <button onClick={() => navigate('/blog')}>Blog</button>
           <button onClick={handleAboutClick}>About</button>
           <button onClick={() => navigate('/contact')}>Contact</button>
         </nav>

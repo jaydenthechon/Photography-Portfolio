@@ -7,6 +7,8 @@ import Collections from './components/Collections';
 import CategoryGallery from './components/CategoryGallery';
 import AboutPage from './components/AboutPage';
 import Contact from './components/Contact';
+import Blog from './components/Blog';
+import BlogPost from './components/BlogPost';
 import Footer from './components/Footer';
 
 // Component to handle scroll restoration
@@ -88,6 +90,8 @@ function App() {
           <Route path="/gallery/:category" element={<CategoryGallery />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>
         <Footer />
       </div>
