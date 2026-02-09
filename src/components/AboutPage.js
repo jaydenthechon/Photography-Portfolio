@@ -1,11 +1,11 @@
 import React from 'react';
 import './AboutPage.css';
 import { allImages } from '../data';
+import profilePhoto from '../assets/images/photos/People/portfolio-261.jpg';
 
 const AboutPage = () => {
-  // Use the first landscape photo as background and first people photo as profile
+  // Use the first landscape photo as background and specific photo as profile
   const backgroundPhoto = allImages.landscapes && allImages.landscapes.length > 0 ? allImages.landscapes[0] : null;
-  const profilePhoto = allImages.people && allImages.people.length > 0 ? allImages.people[0] : null;
   
   return (
     <div className="about-page">
@@ -78,6 +78,7 @@ const AboutPage = () => {
               <li>Sigma Art 17-40mm f/1.8</li>
               <li>Sigma 56mm f/1.4</li>
               <li>Fujifilm XF 60mm f/2.4</li>
+              <li>TTArtisan 25mm f/2.0</li>
             </ul>
           </div>
         </section>
