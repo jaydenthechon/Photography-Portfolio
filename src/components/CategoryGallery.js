@@ -71,9 +71,6 @@ const CategoryGallery = () => {
               onClick={() => setSelectedImage(image)}
             >
               <img src={image.src} alt="" />
-              <div className="gallery-item-overlay">
-                <h3>{image.title}</h3>
-              </div>
             </div>
           ))}
         </div>
@@ -91,8 +88,7 @@ const CategoryGallery = () => {
             <button className="lightbox-nav next" onClick={goToNext}>
               ›
             </button>
-            <img src={selectedImage.src} alt={selectedImage.title} />
-            <h3>{selectedImage.title}</h3>
+            <img src={selectedImage.src} alt="" />
           </div>
         </div>
       )}
