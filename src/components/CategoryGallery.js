@@ -8,14 +8,10 @@ const CategoryGallery = () => {
   const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const categoryTitles = {
-    street: categoryInfo.street.title,
-    portraiture: categoryInfo.portraiture.title,
-    nature: categoryInfo.nature.title,
-    graduation: categoryInfo.graduation.title,
-    events: categoryInfo.events.title,
-    all: 'All Photos'
-  };
+  const categoryTitles = Object.keys(categoryInfo).reduce((acc, key) => {
+    acc[key] = categoryInfo[key].title;
+    return acc;
+  }, { all: 'All Photos' });
 
   // Get images for the selected category or all images if category is 'all'
   const images = category === 'all' 

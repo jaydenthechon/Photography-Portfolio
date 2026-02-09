@@ -1,23 +1,26 @@
-import { streetPhotographyImages, streetPhotographyData } from './streetPhotography';
-import { portraitureImages, portraitureData } from './portraiture';
-import { natureImages, natureData } from './nature';
-import { graduationImages, graduationData } from './graduation';
+import { streetImages, streetData } from './street';
+import { peopleImages, peopleData } from './people';
+import { landscapesImages, landscapesData } from './landscapes';
 import { eventsImages, eventsData } from './events';
+import { graduationImages, graduationData } from './graduation';
+import { stillLifeImages, stillLifeData } from './stillLife';
 
 export const allImages = {
-  street: streetPhotographyImages,
-  portraiture: portraitureImages,
-  nature: natureImages,
+  street: streetImages,
+  people: peopleImages,
+  landscapes: landscapesImages,
+  events: eventsImages,
   graduation: graduationImages,
-  events: eventsImages
+  stillLife: stillLifeImages
 };
 
 export const allImagesData = {
-  street: streetPhotographyData,
-  portraiture: portraitureData,
-  nature: natureData,
+  street: streetData,
+  people: peopleData,
+  landscapes: landscapesData,
+  events: eventsData,
   graduation: graduationData,
-  events: eventsData
+  stillLife: stillLifeData
 };
 
 export const categoryInfo = {
@@ -25,32 +28,77 @@ export const categoryInfo = {
     name: 'street',
     title: 'Street Photography',
     description: 'Urban life and candid moments',
-    count: streetPhotographyImages.length
+    count: 90
   },
-  portraiture: {
-    name: 'portraiture',
-    title: 'Portraiture',
+  people: {
+    name: 'people',
+    title: 'People',
     description: 'Capturing personality and emotion',
-    count: portraitureImages.length
+    count: 34
   },
-  nature: {
-    name: 'nature',
-    title: 'Nature',
-    description: 'Wildlife and natural beauty up close',
-    count: natureImages.length
-  },
-  graduation: {
-    name: 'graduation',
-    title: 'Graduation',
-    description: 'Celebrating academic achievements',
-    count: graduationImages.length
+  landscapes: {
+    name: 'landscapes',
+    title: 'Landscapes',
+    description: 'Breathtaking views and natural scenery',
+    count: 31
   },
   events: {
     name: 'events',
     title: 'Events',
     description: 'Capturing special moments and celebrations',
-    count: eventsImages.length
+    count: 14
+  },
+  graduation: {
+    name: 'graduation',
+    title: 'Graduation',
+    description: 'Celebrating academic achievements',
+    count: 11
+  },
+  stillLife: {
+    name: 'stillLife',
+    title: 'Still Life',
+    description: 'Beautiful compositions and details',
+    count: 7
   }
 };
 
-export const categories = Object.values(categoryInfo);
+export const categories = [
+  {
+    name: 'street',
+    title: 'Street Photography',
+    description: 'Urban life and candid moments',
+    count: 90
+  },
+  {
+    name: 'people',
+    title: 'People',
+    description: 'Capturing personality and emotion',
+    count: 34
+  },
+  {
+    name: 'landscapes',
+    title: 'Landscapes',
+    description: 'Breathtaking views and natural scenery',
+    count: 31
+  },
+  {
+    name: 'events',
+    title: 'Events',
+    description: 'Capturing special moments and celebrations',
+    count: 14
+  },
+  {
+    name: 'graduation',
+    title: 'Graduation',
+    description: 'Celebrating academic achievements',
+    count: 11
+  },
+  {
+    name: 'stillLife',
+    title: 'Still Life',
+    description: 'Beautiful compositions and details',
+    count: 7
+  }
+];
+
+export const totalPhotosCount = 187;

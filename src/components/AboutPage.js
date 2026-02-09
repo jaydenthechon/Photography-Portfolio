@@ -1,10 +1,12 @@
 import React from 'react';
 import './AboutPage.css';
-// Import a background photo and profile photo - you can change these numbers to your preferred images
-import backgroundPhoto from '../assets/images/portfolio-075.jpg';
-import profilePhoto from '../assets/images/portfolio-088.jpg';
+import { allImages } from '../data';
 
 const AboutPage = () => {
+  // Use the first landscape photo as background and first people photo as profile
+  const backgroundPhoto = allImages.landscapes && allImages.landscapes.length > 0 ? allImages.landscapes[0] : null;
+  const profilePhoto = allImages.people && allImages.people.length > 0 ? allImages.people[0] : null;
+  
   return (
     <div className="about-page">
       {/* Hero Section with Background and Profile Photo */}

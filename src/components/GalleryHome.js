@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './GalleryHome.css';
-import { categories } from '../data';
+import { categories, totalPhotosCount } from '../data';
 
 const GalleryHome = () => {
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ const GalleryHome = () => {
           <div className="category-card">
             <h3 className="category-title">All Photos</h3>
             <p className="category-description">Browse all photography from every collection</p>
-            <p className="category-count">163 Photos</p>
+            <p className="category-count">{totalPhotosCount} Photos</p>
             <button 
               className="view-category-btn"
               onClick={() => navigate('/gallery/all')}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Collections.css';
-import { categories, allImages } from '../data';
+import { categories, allImages, totalPhotosCount } from '../data';
 
 const Collections = () => {
   const navigate = useNavigate();
@@ -13,14 +13,18 @@ const Collections = () => {
       return images[Math.floor(Math.random() * images.length)];
     };
 
-    setCategoryExamples({
-      street: getRandomImage(allImages.street),
-      portraiture: getRandomImage(allImages.portraiture),
-      nature: getRandomImage(allImages.nature),
-      graduation: getRandomImage(allImages.graduation),
-      events: getRandomImage(allImages.events),
-      all: getRandomImage(allImages.street)
+    const examples = {};
+    Object.keys(allImages).forEach(categoryKey => {
+      if (allImages[categoryKey] && allImages[categoryKey].length > 0) {
+        examples[categoryKey] = getRandomImage(allImages[categoryKey]);
+      }
     });
+    // Add a random image for the "all" category
+    const firstCategory = Object.keys(allImages)[0];
+    if (firstCategory && allImages[firstCategory].length > 0) {
+      examples.all = getRandomImage(allImages[firstCategory]);
+    }
+    setCategoryExamples(examples);
   }, []);
 
   return (
@@ -57,7 +61,7 @@ const Collections = () => {
             <div className="category-info">
               <h3 className="category-title">All Photos</h3>
               <p className="category-description">Browse all photography from every collection</p>
-              <p className="category-count">163 Photos</p>
+              <p className="category-count">{totalPhotosCount} Photos</p>
             </div>
           </div>
         </div>

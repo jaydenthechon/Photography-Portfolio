@@ -1,10 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './AboutModal.css';
-import profilePhoto from '../assets/images/portfolio-088.jpg';
+import { allImages } from '../data';
 
 const AboutModal = ({ isOpen, onClose }) => {
   const navigate = useNavigate();
+  // Use the first photo from People category as profile photo
+  const profilePhoto = allImages.people && allImages.people.length > 0 ? allImages.people[0] : null;
 
   if (!isOpen) return null;
 
