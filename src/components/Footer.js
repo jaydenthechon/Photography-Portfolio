@@ -30,10 +30,11 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Quick Links</h4>
             <ul>
-              <li><button onClick={() => scrollToSection('home')}>Home</button></li>
-              <li><button onClick={() => scrollToSection('gallery')}>Gallery</button></li>
+              <li><button onClick={() => navigate('/')}>Home</button></li>
+              <li><button onClick={() => navigate('/collections')}>Gallery</button></li>
+              <li><button onClick={() => navigate('/blog')}>Blog</button></li>
               <li><button onClick={() => navigate('/about')}>About</button></li>
-              <li><button onClick={() => scrollToSection('contact')}>Contact</button></li>
+              <li><button onClick={() => navigate('/contact')}>Contact</button></li>
             </ul>
           </div>
           
