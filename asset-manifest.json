@@ -1,10 +1,26 @@
 {
   "files": {
     "main.css": "/Photography-Portfolio/static/css/main.afc3289a.css",
-    "main.js": "/Photography-Portfolio/static/js/main.910f239b.js",
+    "main.js": "/Photography-Portfolio/static/js/main.e3120d5d.js",
     "static/js/453.b9287847.chunk.js": "/Photography-Portfolio/static/js/453.b9287847.chunk.js",
+    "static/media/framing types.jpg": "/Photography-Portfolio/static/media/framing types.6731c241d14241e05ff3.jpg",
+    "static/media/man through window.jpg": "/Photography-Portfolio/static/media/man through window.9da2542d2038c92f3bef.jpg",
+    "static/media/Valentine.jpg": "/Photography-Portfolio/static/media/Valentine.cd309891164fe90d7c6c.jpg",
     "static/media/portfolio-289.jpg": "/Photography-Portfolio/static/media/portfolio-289.8465c30bb94b5fa56a01.jpg",
+    "static/media/Self Portrait.jpg": "/Photography-Portfolio/static/media/Self Portrait.59fa51d4203c915b98ab.jpg",
+    "static/media/Puddle REflection.jpg": "/Photography-Portfolio/static/media/Puddle REflection.dc99b27032196a6c526c.jpg",
+    "static/media/faces.jpg": "/Photography-Portfolio/static/media/faces.57970d7aa0357fc87971.jpg",
+    "static/media/Ferris Wheel Reflection.jpg": "/Photography-Portfolio/static/media/Ferris Wheel Reflection.0ba183cfd29c0e23ba83.jpg",
     "static/media/portfolio-288.jpg": "/Photography-Portfolio/static/media/portfolio-288.ed007048877d5483a0fa.jpg",
+    "static/media/Oyster House.jpg": "/Photography-Portfolio/static/media/Oyster House.eb0847465f7720562609.jpg",
+    "static/media/Ferris Wheel in color.jpg": "/Photography-Portfolio/static/media/Ferris Wheel in color.dec408e487dd93baccd6.jpg",
+    "static/media/Ferris Wheel.jpg": "/Photography-Portfolio/static/media/Ferris Wheel.9ea3948ef6939e0f0b0d.jpg",
+    "static/media/North End Walk.jpg": "/Photography-Portfolio/static/media/North End Walk.cbbe43e8e42b20c95fd9.jpg",
+    "static/media/Smoking man.jpg": "/Photography-Portfolio/static/media/Smoking man.6b1d309757b56476e186.jpg",
+    "static/media/Street-3.jpg": "/Photography-Portfolio/static/media/Street-3.12d246eb542f8a562873.jpg",
+    "static/media/Plane over church.jpg": "/Photography-Portfolio/static/media/Plane over church.d4d458bfdb7b64ce0fd4.jpg",
+    "static/media/Birds in Flight.jpg": "/Photography-Portfolio/static/media/Birds in Flight.dbc5bd98c1b5c1b59541.jpg",
+    "static/media/Street-2.jpg": "/Photography-Portfolio/static/media/Street-2.71cac2b04b09d0a52ca3.jpg",
     "static/media/portfolio-280.jpg": "/Photography-Portfolio/static/media/portfolio-280.61bad59464f50ba067a8.jpg",
     "static/media/portfolio-178.jpg": "/Photography-Portfolio/static/media/portfolio-178.b437992304cf6cf27230.jpg",
     "static/media/portfolio-287.jpg": "/Photography-Portfolio/static/media/portfolio-287.db69541eef0a70588a83.jpg",
@@ -18,10 +34,12 @@
     "static/media/portfolio-279.jpg": "/Photography-Portfolio/static/media/portfolio-279.73510dc05b6cc70175db.jpg",
     "static/media/portfolio-238.jpg": "/Photography-Portfolio/static/media/portfolio-238.6142c7578f8cc2bf2161.jpg",
     "static/media/portfolio-299.jpg": "/Photography-Portfolio/static/media/portfolio-299.c8da8fa4910802830c16.jpg",
+    "static/media/OldGuy in Cafe.jpg": "/Photography-Portfolio/static/media/OldGuy in Cafe.07ee750f3b6a7c30c100.jpg",
     "static/media/portfolio-168.jpg": "/Photography-Portfolio/static/media/portfolio-168.f4efb1288b32e7a02c87.jpg",
     "static/media/portfolio-230.jpg": "/Photography-Portfolio/static/media/portfolio-230.48a1e25d3aa71fc5f7a1.jpg",
     "static/media/portfolio-215.jpg": "/Photography-Portfolio/static/media/portfolio-215.c704bee3ed72db8f1149.jpg",
     "static/media/portfolio-334.jpg": "/Photography-Portfolio/static/media/portfolio-334.afd4708800f20c41c853.jpg",
+    "static/media/Window.jpg": "/Photography-Portfolio/static/media/Window.2718174f33aa967aed7f.jpg",
     "static/media/portfolio-305.jpg": "/Photography-Portfolio/static/media/portfolio-305.67cf1e3d85a5122ba8ba.jpg",
     "static/media/portfolio-332.jpg": "/Photography-Portfolio/static/media/portfolio-332.871213c505108b861cdc.jpg",
     "static/media/portfolio-333.jpg": "/Photography-Portfolio/static/media/portfolio-333.1e327c5f45dc07ee4657.jpg",
@@ -191,11 +209,11 @@
     "static/media/portfolio-300.jpg": "/Photography-Portfolio/static/media/portfolio-300.8f3084eff8a609b16446.jpg",
     "index.html": "/Photography-Portfolio/index.html",
     "main.afc3289a.css.map": "/Photography-Portfolio/static/css/main.afc3289a.css.map",
-    "main.910f239b.js.map": "/Photography-Portfolio/static/js/main.910f239b.js.map",
+    "main.e3120d5d.js.map": "/Photography-Portfolio/static/js/main.e3120d5d.js.map",
     "453.b9287847.chunk.js.map": "/Photography-Portfolio/static/js/453.b9287847.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.afc3289a.css",
-    "static/js/main.910f239b.js"
+    "static/js/main.e3120d5d.js"
   ]
 }
